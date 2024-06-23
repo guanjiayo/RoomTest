@@ -1,3 +1,9 @@
+## 待实现的功能
+拆分测试点
+1. 基本的增删改查  列表形式展示
+2. 复杂数据处理,如一个字段传对象,联表查询等
+3. 数据库版本升级(自动,手动区别) -- 能实现功能的最大程度
+
 ## Room 数据迁移(版本升级)
 
 > https://developer.android.google.cn/training/data-storage/room/migrating-db-versions?hl=zh-cn
