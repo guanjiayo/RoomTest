@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun initData() {
-        mItemList.add("增删改查")
+        mItemList.add("基本的增删改查")
         mAdapter.setData(mItemList)
     }
 
