@@ -1,22 +1,26 @@
-package zs.xmx.room_test
+package zs.xmx.room_test.crud
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import androidx.lifecycle.lifecycleScope
 import kotlinx.coroutines.launch
-import zs.xmx.room_test.databinding.ActivityMainBinding
+import zs.xmx.room_test.databinding.ActivityCrudBinding
+import zs.xmx.room_test.db.UserDao
+import zs.xmx.room_test.db.UserDatabase
+import zs.xmx.room_test.model.User
 
-class MainActivity : AppCompatActivity() {
+class CRUDActivity : AppCompatActivity() {
 
-    private lateinit var mBinding: ActivityMainBinding
+    private lateinit var mBinding: ActivityCrudBinding
+
     private lateinit var userDao: UserDao
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mBinding = ActivityMainBinding.inflate(layoutInflater)
+        mBinding = ActivityCrudBinding.inflate(layoutInflater)
         setContentView(mBinding.root)
 
-        userDao = MyDatabase.getInstance(this).userDao()
+        userDao = UserDatabase.getInstance(this).userDao()
 
         initEvent()
     }

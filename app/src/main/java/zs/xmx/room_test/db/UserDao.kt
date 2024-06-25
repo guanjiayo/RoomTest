@@ -1,7 +1,7 @@
-package zs.xmx.room_test
+package zs.xmx.room_test.db
 
-import androidx.lifecycle.LiveData
 import androidx.room.*
+import zs.xmx.room_test.model.User
 
 
 /**

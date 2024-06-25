@@ -1,4 +1,4 @@
-package zs.xmx.room_test
+package zs.xmx.room_test.db
 
 import androidx.room.RenameColumn
 import androidx.room.migration.AutoMigrationSpec

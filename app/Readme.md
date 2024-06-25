@@ -1,4 +1,9 @@
 ## 待实现的功能
+
+增删改查示例
+> https://developer.android.google.cn/codelabs/basic-android-kotlin-training-persisting-data-room?hl=zh-cn#2
+> https://developer.android.google.cn/codelabs/basic-android-kotlin-compose-persisting-data-room?hl=zh-cn#2
+
 拆分测试点
 1. 基本的增删改查  列表形式展示
 2. 复杂数据处理,如一个字段传对象,联表查询等

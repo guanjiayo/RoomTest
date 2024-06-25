@@ -1,46 +1,45 @@
-package zs.xmx.room_test
+package zs.xmx.room_test.db
 
 import android.content.Context
 import androidx.room.AutoMigration
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
-import androidx.room.migration.Migration
-import androidx.sqlite.db.SupportSQLiteDatabase
-import zs.xmx.room_test.MyDatabase.Companion.LATEST_VERSION
+import zs.xmx.room_test.model.User
+import zs.xmx.room_test.db.UserDatabase.Companion.LATEST_VERSION
 
 
 @Database(
     version = LATEST_VERSION,
     entities = [User::class],
-    autoMigrations = [
+    /*autoMigrations = [
         AutoMigration(from = 1, to = 2),
         AutoMigration(
             from = 2,
             to = 3,
             spec = AutoMigrations.Schema2to3::class
         ),
-    ],
+    ],*/
     exportSchema = true
 )
-abstract class MyDatabase : RoomDatabase() {
+abstract class UserDatabase : RoomDatabase() {
 
 
     abstract fun userDao(): UserDao
 
     companion object {
 
-        const val LATEST_VERSION = 4
+        const val LATEST_VERSION = 1
 
         @Volatile
-        private var instance: MyDatabase? = null
+        private var instance: UserDatabase? = null
 
-        fun getInstance(context: Context): MyDatabase {
+        fun getInstance(context: Context): UserDatabase {
             if (instance == null) {
                 instance = Room.databaseBuilder(
                     context.applicationContext,
-                    MyDatabase::class.java,
-                    "my_database"
+                    UserDatabase::class.java,
+                    "user_database"
                 ).allowMainThreadQueries()
                     .addMigrations(MIGRATION_3_4)
                     .build()

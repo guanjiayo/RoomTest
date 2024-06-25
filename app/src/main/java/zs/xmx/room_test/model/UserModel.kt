@@ -1,4 +1,4 @@
-package zs.xmx.room_test
+package zs.xmx.room_test.model
 
 import androidx.room.ColumnInfo
 import androidx.room.Entity
